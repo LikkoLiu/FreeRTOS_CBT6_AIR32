@@ -88,6 +88,7 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   /* USER CODE BEGIN 2 */
+  Modbus_RegMap();
 	HAL_Delay(2000);
   /* USER CODE END 2 */
 
