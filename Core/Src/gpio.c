@@ -39,7 +39,7 @@
         * EVENT_OUT
         * EXTI
 */
-void MX_GPIO_Init(void) 
+void MX_GPIO_Init(void)
 {
 
   GPIO_InitTypeDef GPIO_InitStruct = {0};
@@ -48,16 +48,55 @@ void MX_GPIO_Init(void)
   __HAL_RCC_GPIOC_CLK_ENABLE();
   __HAL_RCC_GPIOD_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
+  __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(PC13_GPIO_Port, PC13_Pin, GPIO_PIN_SET);
+  HAL_GPIO_WritePin(PWM1_GPIO_Port, PWM1_Pin, GPIO_PIN_SET);
 
-  /*Configure GPIO pin : PtPin */
-  GPIO_InitStruct.Pin = PC13_Pin;
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(GPIOC, PWM2_Pin|PWM3_Pin, GPIO_PIN_RESET);
+
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(GPIOA, PWM4_Pin|PWM5_Pin|PWM6_Pin|PWM7_Pin
+                          |PWM8_Pin|PWM9_Pin|PWM10_Pin|PWM11_Pin
+                          |PWM12_Pin|PWM13_Pin|PWM14_Pin|PWM15_Pin, GPIO_PIN_RESET);
+
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(GPIOB, PWM16_Pin|PWM17_Pin|PWM18_Pin|PWM26_Pin
+                          |PWM27_Pin|PWM28_Pin|PWM29_Pin|PWM30_Pin
+                          |PWM31_Pin|PWM19_Pin|PWM20_Pin|PWM21_Pin
+                          |PWM22_Pin|PWM23_Pin|PWM24_Pin|PWM25_Pin, GPIO_PIN_RESET);
+
+  /*Configure GPIO pins : PCPin PCPin PCPin */
+  GPIO_InitStruct.Pin = PWM1_Pin|PWM2_Pin|PWM3_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
-  HAL_GPIO_Init(PC13_GPIO_Port, &GPIO_InitStruct);
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_MEDIUM;
+  HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
+
+  /*Configure GPIO pins : PAPin PAPin PAPin PAPin
+                           PAPin PAPin PAPin PAPin
+                           PAPin PAPin PAPin PAPin */
+  GPIO_InitStruct.Pin = PWM4_Pin|PWM5_Pin|PWM6_Pin|PWM7_Pin
+                          |PWM8_Pin|PWM9_Pin|PWM10_Pin|PWM11_Pin
+                          |PWM12_Pin|PWM13_Pin|PWM14_Pin|PWM15_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_MEDIUM;
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+  /*Configure GPIO pins : PBPin PBPin PBPin PBPin
+                           PBPin PBPin PBPin PBPin
+                           PBPin PBPin PBPin PBPin
+                           PBPin PBPin PBPin PBPin */
+  GPIO_InitStruct.Pin = PWM16_Pin|PWM17_Pin|PWM18_Pin|PWM26_Pin
+                          |PWM27_Pin|PWM28_Pin|PWM29_Pin|PWM30_Pin
+                          |PWM31_Pin|PWM19_Pin|PWM20_Pin|PWM21_Pin
+                          |PWM22_Pin|PWM23_Pin|PWM24_Pin|PWM25_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_MEDIUM;
+  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
 }
 

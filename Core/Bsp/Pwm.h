@@ -41,7 +41,70 @@ void VirPwm_SetOutHandler(uint8_t state);
 
 /* Private application code --------------------------------------------------*/
 /* USER CODE BEGIN Application */
+extern VirPwm VirPwmDef1;
+extern VirPwm VirPwmDef2;
+extern VirPwm VirPwmDef3;
+extern VirPwm VirPwmDef4;
+extern VirPwm VirPwmDef5;
+extern VirPwm VirPwmDef6;
+extern VirPwm VirPwmDef7;
+extern VirPwm VirPwmDef8;
+extern VirPwm VirPwmDef9;
+extern VirPwm VirPwmDef10;
+extern VirPwm VirPwmDef11;
+extern VirPwm VirPwmDef12;
+extern VirPwm VirPwmDef13;
+extern VirPwm VirPwmDef14;
+extern VirPwm VirPwmDef15;
+extern VirPwm VirPwmDef16;
+extern VirPwm VirPwmDef17;
+extern VirPwm VirPwmDef18;
+extern VirPwm VirPwmDef19;
+extern VirPwm VirPwmDef20;
+extern VirPwm VirPwmDef21;
+extern VirPwm VirPwmDef22;
+extern VirPwm VirPwmDef23;
+extern VirPwm VirPwmDef24;
+extern VirPwm VirPwmDef25;
+extern VirPwm VirPwmDef26;
+extern VirPwm VirPwmDef27;
+extern VirPwm VirPwmDef28;
+extern VirPwm VirPwmDef29;
+extern VirPwm VirPwmDef30;
+extern VirPwm VirPwmDef31;
 
+
+void VirPwm_SetOutHandler1(uint8_t state);
+void VirPwm_SetOutHandler2(uint8_t state);
+void VirPwm_SetOutHandler3(uint8_t state);
+void VirPwm_SetOutHandler4(uint8_t state);
+void VirPwm_SetOutHandler5(uint8_t state);
+void VirPwm_SetOutHandler6(uint8_t state);
+void VirPwm_SetOutHandler7(uint8_t state);
+void VirPwm_SetOutHandler8(uint8_t state);
+void VirPwm_SetOutHandler9(uint8_t state);
+void VirPwm_SetOutHandler10(uint8_t state);
+void VirPwm_SetOutHandler11(uint8_t state);
+void VirPwm_SetOutHandler12(uint8_t state);
+void VirPwm_SetOutHandler13(uint8_t state);
+void VirPwm_SetOutHandler14(uint8_t state);
+void VirPwm_SetOutHandler15(uint8_t state);
+void VirPwm_SetOutHandler16(uint8_t state);
+void VirPwm_SetOutHandler17(uint8_t state);
+void VirPwm_SetOutHandler18(uint8_t state);
+void VirPwm_SetOutHandler19(uint8_t state);
+void VirPwm_SetOutHandler20(uint8_t state);
+void VirPwm_SetOutHandler21(uint8_t state);
+void VirPwm_SetOutHandler22(uint8_t state);
+void VirPwm_SetOutHandler23(uint8_t state);
+void VirPwm_SetOutHandler24(uint8_t state);
+void VirPwm_SetOutHandler25(uint8_t state);
+void VirPwm_SetOutHandler26(uint8_t state);
+void VirPwm_SetOutHandler27(uint8_t state);
+void VirPwm_SetOutHandler28(uint8_t state);
+void VirPwm_SetOutHandler29(uint8_t state);
+void VirPwm_SetOutHandler30(uint8_t state);
+void VirPwm_SetOutHandler31(uint8_t state);
 /* USER CODE END Application */
 
 

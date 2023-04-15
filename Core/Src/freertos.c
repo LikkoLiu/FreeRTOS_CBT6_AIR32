@@ -147,7 +147,7 @@ void StartDefaultTask(void const * argument)
   for(;;)
   {
     RS485_Service();
-		HAL_GPIO_TogglePin(PC13_GPIO_Port, PC13_Pin);
+		HAL_GPIO_TogglePin(PWM1_GPIO_Port, PWM1_Pin);
     osDelay(1000);
   }
   /* USER CODE END StartDefaultTask */

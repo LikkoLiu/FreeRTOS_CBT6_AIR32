@@ -48,8 +48,8 @@
   * @{
   */
 /* Define size for the receive and transmit buffer over CDC */
-#define APP_RX_DATA_SIZE  128
-#define APP_TX_DATA_SIZE  128
+#define APP_RX_DATA_SIZE  1024
+#define APP_TX_DATA_SIZE  1024
 /* USER CODE BEGIN EXPORTED_DEFINES */
 extern uint8_t RS485_RX_BUFF[APP_RX_DATA_SIZE];
 extern uint8_t RS485_TX_BUFF[APP_RX_DATA_SIZE];
