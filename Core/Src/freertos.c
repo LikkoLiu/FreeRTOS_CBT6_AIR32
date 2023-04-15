@@ -51,7 +51,8 @@ osThreadId defaultTaskHandle;
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
-
+osThreadId LEDFLASH_TaskHandle;
+void LEDFLASH_Task(void const * argument);
 /* USER CODE END FunctionPrototypes */
 
 void StartDefaultTask(void const * argument);
@@ -122,8 +123,12 @@ void MX_FREERTOS_Init(void) {
 
   /* Create the thread(s) */
   /* definition and creation of defaultTask */
-  osThreadDef(defaultTask, StartDefaultTask, osPriorityNormal, 0, 512);
+  osThreadDef(defaultTask, StartDefaultTask, osPriorityAboveNormal, 0, 512);
   defaultTaskHandle = osThreadCreate(osThread(defaultTask), NULL);
+  //creare task LEDFLASH
+  osThreadDef(LEDFLASH, LEDFLASH_Task, osPriorityNormal, 0, 128);
+  LEDFLASH_TaskHandle = osThreadCreate(osThread(LEDFLASH), NULL);
+
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -147,14 +152,25 @@ void StartDefaultTask(void const * argument)
   for(;;)
   {
     RS485_Service();
-		HAL_GPIO_TogglePin(PWM1_GPIO_Port, PWM1_Pin);
-    osDelay(1000);
+    osDelay(50);
   }
   /* USER CODE END StartDefaultTask */
 }
 
 /* Private application code --------------------------------------------------*/
 /* USER CODE BEGIN Application */
-
+void LEDFLASH_Task(void const * argument)
+{
+  /* init code for USB_DEVICE */
+  MX_USB_DEVICE_Init();
+  /* USER CODE BEGIN StartDefaultTask */
+  /* Infinite loop */
+  for(;;)
+  {
+		HAL_GPIO_TogglePin(PWM1_GPIO_Port, PWM1_Pin);
+    osDelay(1000);
+  }
+  /* USER CODE END StartDefaultTask */
+}
 /* USER CODE END Application */
 

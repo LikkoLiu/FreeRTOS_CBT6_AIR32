@@ -8,6 +8,8 @@
         "cmsis_os.h": "c",
         "tim.h": "c",
         "stm32f1xx_hal_conf.h": "c",
-        "stm32f1xx_hal_tim.h": "c"
+        "stm32f1xx_hal_tim.h": "c",
+        "freertos.h": "c",
+        "task.h": "c"
     }
 }

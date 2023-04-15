@@ -17,7 +17,7 @@ typedef struct{
 	uint8_t Status;
 	uint8_t Idle;
 	uint16_t Frequency;
-	uint16_t DutyCycle;
+	uint32_t DutyCycle;
 	TIM_TypeDef *Basetimer;
 	VirPwm_SetOutput SetOut;
     uint8_t count_P;

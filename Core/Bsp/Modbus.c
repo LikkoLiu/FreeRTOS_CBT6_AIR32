@@ -55,38 +55,36 @@ uint32_t testData29 = 500, testData30 = 600, testData31 = 700, testData32 = 800;
 void Modbus_RegMap(void)
 {
     // 保持寄存器指针指向
-    Modbus_HoldReg[0] = (uint16_t *)&testData1;     // 测试数据1
-    Modbus_HoldReg[1] = (uint16_t *)&testData2;     // 测试数据2
-    Modbus_HoldReg[2] = (uint16_t *)&testData3;     // 测试数据3
-    Modbus_HoldReg[3] = (uint16_t *)&testData4;     // 测试数据4
-    Modbus_HoldReg[4] = (uint16_t *)&testData5;     // 测试数据5
-    Modbus_HoldReg[5] = (uint16_t *)&testData6;     // 测试数据6
-    Modbus_HoldReg[6] = (uint16_t *)&testData7;     // 测试数据7
-    Modbus_HoldReg[7] = (uint16_t *)&testData8;     // 测试数据8
-    Modbus_HoldReg[8] = (uint16_t *)&testData9;     // 测试数据9
-    Modbus_HoldReg[9] = (uint16_t *)&testData10;    // 测试数据10
-    Modbus_HoldReg[10] = (uint16_t *)&testData11;   // 测试数据11
-    Modbus_HoldReg[11] = (uint16_t *)&testData12;   // 测试数据12
-    Modbus_HoldReg[12] = (uint16_t *)&testData13;   // 测试数据13
-    Modbus_HoldReg[13] = (uint16_t *)&testData14;   // 测试数据14
-    Modbus_HoldReg[14] = (uint16_t *)&testData15;   // 测试数据15
-    Modbus_HoldReg[15] = (uint16_t *)&testData16;   // 测试数据16
-    Modbus_HoldReg[16] = (uint16_t *)&testData17;   // 测试数据17
-    Modbus_HoldReg[17] = (uint16_t *)&testData18;   // 测试数据18
-    Modbus_HoldReg[18] = (uint16_t *)&testData19;   // 测试数据19
-    Modbus_HoldReg[19] = (uint16_t *)&testData20;   // 测试数据20
-    Modbus_HoldReg[20] = (uint16_t *)&testData21;   // 测试数据21
-    Modbus_HoldReg[21] = (uint16_t *)&testData22;   // 测试数据22
-    Modbus_HoldReg[22] = (uint16_t *)&testData23;   // 测试数据23
-    Modbus_HoldReg[23] = (uint16_t *)&testData24;   // 测试数据24
-    Modbus_HoldReg[24] = (uint16_t *)&testData25;   // 测试数据25
-    Modbus_HoldReg[25] = (uint16_t *)&testData26;   // 测试数据26
-    Modbus_HoldReg[26] = (uint16_t *)&testData27;   // 测试数据27
-    Modbus_HoldReg[27] = (uint16_t *)&testData28;   // 测试数据28
-    Modbus_HoldReg[28] = (uint16_t *)&testData29;   // 测试数据29
-    Modbus_HoldReg[29] = (uint16_t *)&testData30;   // 测试数据30
-    Modbus_HoldReg[30] = (uint16_t *)&testData31;   // 测试数据31
-    Modbus_HoldReg[31] = (uint16_t *)&testData32;   // 测试数据32
+    Modbus_HoldReg[0] = (uint16_t *)&VirPwmDef2.DutyCycle;
+    Modbus_HoldReg[1] = (uint16_t *)&VirPwmDef3.DutyCycle; 
+    Modbus_HoldReg[2] = (uint16_t *)&VirPwmDef4.DutyCycle;
+    Modbus_HoldReg[3] = (uint16_t *)&VirPwmDef5.DutyCycle;
+    Modbus_HoldReg[4] = (uint16_t *)&VirPwmDef6.DutyCycle;
+    Modbus_HoldReg[5] = (uint16_t *)&VirPwmDef7.DutyCycle;
+    Modbus_HoldReg[6] = (uint16_t *)&VirPwmDef8.DutyCycle;
+    Modbus_HoldReg[7] = (uint16_t *)&VirPwmDef9.DutyCycle;
+    Modbus_HoldReg[8] = (uint16_t *)&VirPwmDef10.DutyCycle;
+    Modbus_HoldReg[9] = (uint16_t *)&VirPwmDef11.DutyCycle;
+    Modbus_HoldReg[10] = (uint16_t *)&VirPwmDef12.DutyCycle;
+    Modbus_HoldReg[11] = (uint16_t *)&VirPwmDef13.DutyCycle;
+    Modbus_HoldReg[12] = (uint16_t *)&VirPwmDef14.DutyCycle;
+    Modbus_HoldReg[13] = (uint16_t *)&VirPwmDef15.DutyCycle;
+    Modbus_HoldReg[14] = (uint16_t *)&VirPwmDef16.DutyCycle;
+    Modbus_HoldReg[15] = (uint16_t *)&VirPwmDef17.DutyCycle;
+    Modbus_HoldReg[16] = (uint16_t *)&VirPwmDef18.DutyCycle;
+    Modbus_HoldReg[17] = (uint16_t *)&VirPwmDef19.DutyCycle;
+    Modbus_HoldReg[18] = (uint16_t *)&VirPwmDef20.DutyCycle;
+    Modbus_HoldReg[19] = (uint16_t *)&VirPwmDef21.DutyCycle;
+    Modbus_HoldReg[20] = (uint16_t *)&VirPwmDef22.DutyCycle;
+    Modbus_HoldReg[21] = (uint16_t *)&VirPwmDef23.DutyCycle;
+    Modbus_HoldReg[22] = (uint16_t *)&VirPwmDef24.DutyCycle;
+    Modbus_HoldReg[23] = (uint16_t *)&VirPwmDef25.DutyCycle;
+    Modbus_HoldReg[24] = (uint16_t *)&VirPwmDef26.DutyCycle;
+    Modbus_HoldReg[25] = (uint16_t *)&VirPwmDef27.DutyCycle;
+    Modbus_HoldReg[26] = (uint16_t *)&VirPwmDef28.DutyCycle;
+    Modbus_HoldReg[27] = (uint16_t *)&VirPwmDef29.DutyCycle;
+    Modbus_HoldReg[28] = (uint16_t *)&VirPwmDef30.DutyCycle;
+    Modbus_HoldReg[29] = (uint16_t *)&VirPwmDef31.DutyCycle;
 }
 
 void RS485_Service(void)
