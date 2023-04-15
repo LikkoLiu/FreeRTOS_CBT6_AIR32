@@ -66,7 +66,7 @@ void MX_TIM1_Init(void)
     Error_Handler();
   }
   /* USER CODE BEGIN TIM1_Init 2 */
-  HAL_TIM_Base_Start_IT(&htim1);       //通过这行代码，以中断的方式启动定时器。  
+  HAL_TIM_Base_Start_IT(&htim1);       //通过这行代码，以中断的方式启动定时器�?  
   /* USER CODE END TIM1_Init 2 */
 
 }
@@ -106,7 +106,7 @@ void MX_TIM2_Init(void)
     Error_Handler();
   }
   /* USER CODE BEGIN TIM2_Init 2 */
-  HAL_TIM_Base_Start_IT(&htim2);       //通过这行代码，以中断的方式启动定时器。  
+  HAL_TIM_Base_Start_IT(&htim2);       //通过这行代码，以中断的方式启动定时器�?  
   /* USER CODE END TIM2_Init 2 */
 
 }
@@ -146,7 +146,7 @@ void MX_TIM3_Init(void)
     Error_Handler();
   }
   /* USER CODE BEGIN TIM3_Init 2 */
-  HAL_TIM_Base_Start_IT(&htim3);       //通过这行代码，以中断的方式启动定时器。  
+  HAL_TIM_Base_Start_IT(&htim3);       //通过这行代码，以中断的方式启动定时器�?  
   /* USER CODE END TIM3_Init 2 */
 
 }
@@ -186,7 +186,7 @@ void MX_TIM4_Init(void)
     Error_Handler();
   }
   /* USER CODE BEGIN TIM4_Init 2 */
-  HAL_TIM_Base_Start_IT(&htim4);       //通过这行代码，以中断的方式启动定时器。  
+  HAL_TIM_Base_Start_IT(&htim4);       //通过这行代码，以中断的方式启动定时器�?  
   /* USER CODE END TIM4_Init 2 */
 
 }

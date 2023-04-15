@@ -123,15 +123,12 @@ void MX_FREERTOS_Init(void) {
 
   /* Create the thread(s) */
   /* definition and creation of defaultTask */
-  osThreadDef(defaultTask, StartDefaultTask, osPriorityAboveNormal, 0, 512);
+  osThreadDef(defaultTask, StartDefaultTask, osPriorityNormal, 0, 512);
   defaultTaskHandle = osThreadCreate(osThread(defaultTask), NULL);
-  //creare task LEDFLASH
-  osThreadDef(LEDFLASH, LEDFLASH_Task, osPriorityNormal, 0, 128);
-  LEDFLASH_TaskHandle = osThreadCreate(osThread(LEDFLASH), NULL);
-
 
   /* USER CODE BEGIN RTOS_THREADS */
-  /* add threads, ... */
+  osThreadDef(LEDFLASH, LEDFLASH_Task, osPriorityNormal, 0, 128);
+  LEDFLASH_TaskHandle = osThreadCreate(osThread(LEDFLASH), NULL);
   /* USER CODE END RTOS_THREADS */
 
 }

@@ -1,3 +1,4 @@
 Load "FreeRTOS_CBT6\\FreeRTOS_CBT6.axf" 
-Erase Done.Programming Done.Verify OK.Application running ...
-Flash Load finished at 15:58:18
+RDDI-DAP Error
+Error: Flash Download failed  -  Target DLL has been cancelled
+Flash Load finished at 16:55:09
