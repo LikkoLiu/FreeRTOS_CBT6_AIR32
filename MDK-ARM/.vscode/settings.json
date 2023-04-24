@@ -10,6 +10,7 @@
         "stm32f1xx_hal_conf.h": "c",
         "stm32f1xx_hal_tim.h": "c",
         "freertos.h": "c",
-        "task.h": "c"
+        "task.h": "c",
+        "usbd_cdc_if.h": "c"
     }
 }

@@ -267,7 +267,7 @@ static int8_t CDC_Receive_FS(uint8_t* Buf, uint32_t *Len)
   USBD_CDC_ReceivePacket(&hUsbDeviceFS);
   memcpy(RS485_RX_BUFF, &Buf[0], 128);
   RS485_FrameFlag = 1;
-  RS485_RX_CNT = 8;
+  RS485_RX_CNT = *Len;
   // CDC_Transmit_FS("OK!\n", 4);
   return (USBD_OK);
 
@@ -301,7 +301,17 @@ uint8_t CDC_Transmit_FS(uint8_t* Buf, uint16_t Len)
 }
 
 /* USER CODE BEGIN PRIVATE_FUNCTIONS_IMPLEMENTATION */
+void usb_printf(char *fmt, ...)
+{
+  va_list args;
+  uint16_t length;
+  uint8_t UserTxBufferFS[1024];
 
+  va_start(args, fmt);
+  length = vsprintf((char *)UserTxBufferFS, fmt, args);
+  va_end(args);
+  CDC_Transmit_FS(UserTxBufferFS, length);
+}
 /* USER CODE END PRIVATE_FUNCTIONS_IMPLEMENTATION */
 
 /**

@@ -28,7 +28,7 @@ typedef struct{
  * 与平台相关， 操作GPIO的宏定义
  */
 // #define DIG_OUTPUT_1(status)			HAL_GPIO_WritePin(GPIOA, GPIO_PIN_13, status)
-
+ 
 extern VirPwm VirPwmDef;
 
 void VirPwm_Init(VirPwm *VirPwmDef,uint16_t freq,uint16_t dutyCycle,uint8_t idle, VirPwm_SetOutput setOutHandler);
